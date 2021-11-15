@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 
 int main(){
@@ -8,7 +9,7 @@ int main(){
     if (pid>0)
     {
         //parent   
-        
+        wait(NULL);
         printf("Parent: %d Parent pid: %d\n",pid,getpid());
     }
     if (pid == 0)
